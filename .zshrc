@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
 . /home/mahmoud/Documents/git-repos/z-master/z.sh
 #eval $(thefuck --alias fuck)
 #alias fix="fuck"
+alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
 alias update-all="sudo apt update && sudo apt full-upgrade && sudo apt autoremove"
 alias gs="git status"
 alias gist="gist -p -c"
@@ -144,4 +145,3 @@ export PATH=/home/mahmoud/.local/bin:$PATH
 
 ## Use prezto
 #source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
