@@ -121,6 +121,15 @@ function fbr() {
   git checkout $(echo "$branch" | sed "s:.* remotes/origin/::" | sed "s:.* ::")
 }
 
+function gcopy() {
+    if [ uname -o == "GNU/Linux" ]
+    then
+        gitio shorten "$1" | xclip -selection clipboard
+    else
+        gitio shorten "$1" | pbcopy
+    fi
+}
+
 #export PATH="/home/mahmoud/pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
