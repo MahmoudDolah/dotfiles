@@ -140,6 +140,8 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export VIS_PATH=$HOME/.vis
 
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
 #if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 #        source /etc/profile.d/vte.sh
 #fi
