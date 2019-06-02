@@ -95,7 +95,8 @@ source $ZSH/oh-my-zsh.sh
 #eval $(thefuck --alias fuck)
 #alias fix="fuck"
 alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
-alias update-all="sudo apt update && sudo apt full-upgrade && sudo apt autoremove"
+alias open='xdg-open'
+alias update-all="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 alias gs="git status"
 alias gist="gist -p -c"
 alias pbcopy='xsel --clipboard --input'
@@ -139,6 +140,8 @@ export GOPATH=$HOME/Documents/Golang
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export VIS_PATH=$HOME/.vis
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
