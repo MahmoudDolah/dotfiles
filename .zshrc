@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
 alias open='xdg-open'
 alias update-all="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
+alias ua="update-all"
 alias gs="git status"
 alias gist="gist -p -c"
 alias pbcopy='xsel --clipboard --input'
@@ -159,3 +160,5 @@ export PATH=/home/mahmoud/.local/bin:$PATH
 
 ## Use prezto
 #source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
