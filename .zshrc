@@ -99,6 +99,7 @@ alias open='xdg-open'
 alias update-all="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 alias ua="update-all"
 alias gs="git status"
+alias lt="ls -althr"
 alias gist="gist -p -c"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
