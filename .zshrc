@@ -7,15 +7,7 @@ export ZSH=/home/mahmoud/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="random"
-# ZSH_THEME="mrtazz"
-# ZSH_THEME="nicoulaj"
-# ZSH_THEME="candy"
-# ZSH_THEME="af-magic"
 ZSH_THEME="dpoggi"
-# ZSH_THEME="bullet-train"
-# antigen theme eendroroy/alien alien
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,7 +51,7 @@ ZSH_THEME="dpoggi"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, vi-mode)
+plugins=(gitfast, vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,6 +87,14 @@ source $ZSH/oh-my-zsh.sh
 #eval $(thefuck --alias fuck)
 #alias fix="fuck"
 alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
+alias v='vim'
+alias vrc='vim ~/.zshrc'
+alias src='source ~/.zshrc'
+alias wtf='wtfutil'
+alias wtfvrc='vim /home/mahmoud/.config/wtf/config.yml'
+alias sampler='sampler -c ~/.config/sampler/config.yml'
+alias samplervrc='vim ~/.config/sampler/config.yml'
+alias myip='curl -4 icanhazip.com'
 alias open='xdg-open'
 alias update-all="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 alias ua="update-all"
@@ -103,7 +103,9 @@ alias lt="ls -althr"
 alias gist="gist -p -c"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-
+eval "$(hub alias -s)"
+fpath=(~/.zsh $fpath)
+# . /etc/bash_completion.d/git
 
 function lb() {
     mkdir -p ~/.logbook
@@ -133,10 +135,6 @@ function gcopy() {
     fi
 }
 
-#export PATH="/home/mahmoud/pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Documents/Golang
 export PATH=$PATH:$GOPATH/bin
@@ -144,8 +142,6 @@ export PATH=$PATH:$GOROOT/bin
 export VIS_PATH=$HOME/.vis
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
 #if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 #        source /etc/profile.d/vte.sh
@@ -158,8 +154,5 @@ export NVM_DIR="$HOME/.nvm"
 export GPG_TTY=$(tty)
 export GPG_TTY=$(tty)
 export PATH=/home/mahmoud/.local/bin:$PATH
-
-## Use prezto
-#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
