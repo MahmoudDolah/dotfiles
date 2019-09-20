@@ -1,3 +1,4 @@
+echo "What's good :)"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -99,6 +100,7 @@ alias open='xdg-open'
 alias update-all="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 alias ua="update-all"
 alias gs="git status"
+alias gfa="git fetch --all"
 alias lt="ls -althr"
 alias gist="gist -p -c"
 alias pbcopy='xsel --clipboard --input'
