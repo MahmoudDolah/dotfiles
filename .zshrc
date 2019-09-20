@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 #alias fix="fuck"
 alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
 alias v='vim'
+alias nv='nvim'
 alias vrc='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 alias wtf='wtfutil'
@@ -113,12 +114,6 @@ function lb() {
     mkdir -p ~/.logbook
     vim ~/.logbook/$(date '+%Y-%m-%d').md
 }
-function lbc() {
-    mkdir -p ~/.logbook
-    code ~/.logbook/
-    touch ~/.logbook/$(date '+%Y-%m-%d').md
-    code -g ~/.logbook/$(date '+%Y-%m-%d').md
-}
 
 function fbr() {
   git fetch
@@ -135,6 +130,10 @@ function gcopy() {
     else
         gitio shorten "$1" | pbcopy
     fi
+}
+
+function cheat() {
+    curl cht.sh/$1
 }
 
 export GOROOT=/usr/local/go
