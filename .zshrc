@@ -3,7 +3,7 @@ echo "What's good :)"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mahmoud/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,14 +98,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. /home/mahmoud/Documents/git-repos/z-master/z.sh
-alias config='/usr/bin/git --git-dir=/home/mahmoud/.cfg/ --work-tree=/home/mahmoud'
+. $HOME/Documents/git-repos/z-master/z.sh
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias v='vim'
 alias nv='nvim'
 alias vrc='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 alias wtf='wtfutil'
-alias wtfvrc='vim /home/mahmoud/.config/wtf/config.yml'
+alias wtfvrc='vim $HOME/.config/wtf/config.yml'
 alias sampler='sampler -c ~/.config/sampler/config.yml'
 alias samplervrc='vim ~/.config/sampler/config.yml'
 alias myip='curl -4 icanhazip.com'
@@ -154,5 +154,5 @@ export PATH=$PATH:$GOROOT/bin
 export VIS_PATH=$HOME/.vis
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export PATH=/home/mahmoud/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
