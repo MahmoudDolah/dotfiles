@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. $HOME/Documents/git-repos/z-master/z.sh
+. $HOME/.local/bin/z/z.sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias v='vim'
 alias nv='nvim'
@@ -118,7 +118,6 @@ alias lt="ls -althr"
 alias gist="gist -p -c"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-eval "$(hub alias -s)"
 fpath=(~/.zsh $fpath)
 
 function lb() {
