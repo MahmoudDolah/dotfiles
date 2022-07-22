@@ -120,6 +120,12 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 fpath=(~/.zsh $fpath)
 
+
+alias get-notes='rclone sync drive:Obsidian /home/mood/Documents/Obsidian' # sync notes from drive
+alias push-notes='rclone sync /home/mood/Documents/Obsidian drive:Obsidian' # push local notes to drive
+alias rclone-fetch-remote='rclone sync /home/mood/Documents/Obsidian drive:Obsidian'
+alias rclone-sync-local='rclone sync /home/mood/Documents/Obsidian drive:Obsidian'
+
 function lb() {
     mkdir -p ~/.logbook
     vim ~/.logbook/$(date '+%Y-%m-%d').md
