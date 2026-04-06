@@ -31,7 +31,8 @@ opt.signcolumn = "yes"    -- always show gutter (avoids layout shifts)
 opt.cursorline = true     -- highlight current line
 opt.scrolloff = 999         -- keep 8 lines above/below cursor
 opt.sidescrolloff = 8
-opt.wrap = false          -- no line wrapping
+opt.wrap = true          -- line wrapping by default
+opt.linebreak = true     -- wrap break on word boundary
 opt.colorcolumn = "88"    -- PEP 8 + black default column guide
 
 -- Splits
