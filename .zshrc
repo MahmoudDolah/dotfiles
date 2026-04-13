@@ -116,8 +116,10 @@ alias gs="git status"
 alias gfa="git fetch --all"
 alias lt="ls -althr"
 alias gist="gist -p -c"
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+alias pbcopy-x11='xsel --clipboard --input'
+alias pbpaste-x11='xsel --clipboard --output'
+alias pbcopy='wl-copy'
+alias pbpaste='wl-paste --no-newline'
 fpath=(~/.zsh $fpath)
 
 
